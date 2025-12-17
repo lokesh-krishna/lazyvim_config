@@ -3,10 +3,6 @@
     "prefix": ["eq"],
     "body": ["\\$\\$", "$1", "\\$\\$ {#eq-${2: label}}"]
   },
-  "Insert Block Equation": {
-    "prefix": "$$",
-    "body": ["\\$$", "${0}", "\\$$"]
-  },
   "img": {
     "prefix": ["img"],
     "body": ["![](./img/$1)"]
