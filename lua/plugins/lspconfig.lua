@@ -5,6 +5,7 @@ return {
       servers = {
         cssls = {},
         html = {},
+        harper_ls = {},
       },
     },
   },
