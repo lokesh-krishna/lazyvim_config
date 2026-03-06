@@ -1,3 +1,21 @@
+-- Setup format on write for air and disable r-languageserver's formatting
+vim.lsp.config["air"] = {
+  on_attach = function(_, bufnr)
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      buffer = bufnr,
+      callback = function()
+        vim.lsp.buf.format()
+      end,
+    })
+  end,
+}
+vim.lsp.config["r_language_server"] = {
+  on_attach = function(client, _)
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
+  end,
+}
+-- Setup R.nvim
 return {
   "R-nvim/R.nvim",
   opts = {

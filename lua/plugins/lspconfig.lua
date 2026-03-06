@@ -6,6 +6,7 @@ return {
         cssls = {},
         html = {},
         harper_ls = {},
+        air = {},
       },
     },
   },
