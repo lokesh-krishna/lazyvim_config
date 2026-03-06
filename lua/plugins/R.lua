@@ -1,4 +1,4 @@
--- Setup format on write for air and disable r-languageserver's formatting
+-- Setting up format on write for air
 vim.lsp.config["air"] = {
   on_attach = function(_, bufnr)
     vim.api.nvim_create_autocmd("BufWritePre", {
@@ -9,13 +9,14 @@ vim.lsp.config["air"] = {
     })
   end,
 }
+-- Disable r-languageserver's formatting because air
 vim.lsp.config["r_language_server"] = {
   on_attach = function(client, _)
     client.server_capabilities.documentFormattingProvider = false
     client.server_capabilities.documentRangeFormattingProvider = false
   end,
 }
--- Setup R.nvim
+-- Setting up R.nvim
 return {
   "R-nvim/R.nvim",
   opts = {
@@ -25,9 +26,9 @@ return {
         vim.keymap.set("i", "<M-m>", " |>")
       end,
     },
-    -- start automatically when opening a R or Quarto file
+    -- Start automatically when opening an R or Quarto file
     auto_start = "always",
-    -- always open in a vertical split
+    -- Always open in a vertical split
     rconsole_width = 0,
     -- use visidata to view dataframes
     view_df = {
@@ -36,7 +37,7 @@ return {
     },
     -- split path with here
     path_split_fun = "here",
-    -- R output in terminal follows colorscheme
+    -- R output in terminal follows color scheme
     Rout_follow_colorscheme = true,
   },
 }
