@@ -535,6 +535,7 @@
       "    incremental: true",
       "    callout-appearance: simple",
       "    transition: slide",
+      "    smaller: true",
       "    embed-resources: true",
       "    theme: custom.scss",
       "---"
