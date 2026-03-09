@@ -4,7 +4,7 @@
         "snippets": [
             { "language": "all", "path": "./global.json" },
             { "language": "quarto", "path": "./quarto.json" },
-            { "language": "markdown", "path": "./markdown.json" },
+            { "language": ["markdown", "quarto"], "path": "./markdown.json" },
             { "language": [ "json", "jsonc" ], "path": "./json.json" },
             { "language": [ "css", "scss" ], "path": "./css.json" },
             { "language": "tex", "path": "./tex.json" },
